@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling to the navigation bar */
+    body {
+      background-color: rgb(4, 4, 37);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: left;
+      color: white; /* Heading color */
+      margin-left:30px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(4, 4, 37);
+      float: right; /* Move the navigation bar to the right */
+      font-family: 'Poppins', sans-serif;
+      width:1124px;
+      height:57px;
+      top:32px;
+      left:89px;
+      
+    }
+
+    li {
+      float: left;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    li a {
+      display: block;
+      color: white; /* Change the text color to blue */
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+
+      
+    }
+
+    li a:hover {
+      background-color: rgb(4, 4, 37);
+    }
+
+    /* Style the dropdown menu */
+    .dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(4, 4, 37); /* Change the background color to blue */
+      color: white; /* Change the text color to white */
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white; /* Change the text color to white */
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgb(4, 4, 37);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Add a drop-down symbol (triangle) */
+    .dropdown-symbol {
+      margin-left: 5px;
+      border-style: solid;
+      border-width: 0 5px 5px 5px;
+      transform: rotate(180deg);
+      border-color: transparent transparent white transparent;
+      display: inline-block;
+    }
+
+    .logo {
+      float: left;
+    }
+
+    .logo img {
+      height: 50px; /* Adjust the height of the logo */
+    }
+
+    header {
+      padding: 10px;
+      overflow: hidden;
+      
+    }
+
+    p {
+      color: white;
+    }
+
+    .content-container {
+      display: flex;
+      max-width: 1375px; /* Adjust the max-width as needed */
+      margin: 20px;
+    }
+
+    .content {
+      flex: 3;
+      padding: 10px;
+      font-size:28px;
+      font-weight: 500;
+      line-height: 42.14px;
+
+       /* Add a background color or adjust as needed */
+    }
+
+    .logo-container {
+      flex: 0.4;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width:684px;
+      height:684px;
+      top: 163px;
+      left: 823px;
+    }
+
+    .logo-container img {
+      max-width: 200%; /* Ensure the logo doesn't exceed the container */
+      height: auto;
+    }
+
+    /* Chat container */
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px; /* Maximum width of the chat container */
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Chat bubble container */
+    .chat-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+       /* Maximum width of the chat container */
+      width:1169px;
+      height:626px;
+      top:1306px;
+      left:55px;
+    }
+
+    /* Chat bubble container */
+    .chat-bubble {
+      display: flex;
+      flex-direction: column;
+      max-width: 150%; /* Maximum width of the chat bubble */
+      margin-bottom: 10px;
+      position: relative;
+      padding: 10px;
+      font-size: 18px;
+      position: relative;
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    /* Sent chat bubble with curved top */
+    .sent {
+      background-color: #0c361e;
+      align-self: flex-end;
+      border-top-left-radius: 20px; /* Adjust the radius as needed */
+      margin-left:90px;
+    }
+
+    /* Received chat bubble with curved top */
+    .received {
+      background-color: #28282c;
+      align-self: flex-start;
+      border-top-right-radius: 20px; /* Adjust the radius as needed */
+      margin-left:30px;
+    }
+
+    /* Tagged message styling */
+    .tagged .chat-bubble {
+      background-color: #FFD700; /* Highlighted background color for tagged messages */
+    }
+
+    /* Timestamp styling */
+    .timestamp {
+      font-size: 12px;
+      color: #777;
+      align-self: flex-end;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Navigation.png" alt="Your Logo">
+    </div>
+    <ul>
+      <li><a href="#home" font-family: 'Poppins', sans-serif;>Magazine</a></li>
+      <li><a href="#about">Blog</a></li>
+      <li class="dropdown">
+        <a href="#services">Clubs <span class="dropdown-symbol"></span></a>
+        <div class="dropdown-content">
+          <a href="#service1">Club1</a>
+          <a href="#service2"> Club2</a>
+          <a href="#service3">Club3</a>
+        </div>
+      </li>
+      <li><a href="#contact">Events</a></li>
+    </ul>
+  </header>
+  <h1>TRENDLES</h1>
+  <div class="content-container">
+    <div class="content">
+      <p>The Trendles Club organizes and promotes various personality building activities and provides enough avenues under multiple domains to students to facilitate the pursuit of the dreams.</p>
+    </div>
+    <div class="logo-container">
+      <!-- Add another heading and content as needed -->
+      <img src="Icon Dance.svg" alt="Logo">
+    </div>
+  </div>
+  <h1>WE ARE all about Social</h1>
+  <div class="content-container">
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi arcu at facilisi nisi posuere justo. Risus interdum neque vivamus pellentesque. Blandit cursus massa eu quam. Adipiscing a phasellus blandit elementum.</p>
+    </div>
+  </div>
+  
+    <!-- Chat container for styling purposes -->
+    <div class="chat-container">
+      <!-- Tagged message and reply -->
+      <div class="chat-bubble received tagged">
+        <p>Same! Photography is my passion</p>
+        <div class="timestamp">9:00 AM</div>
+      </div>
+      <div class="chat-bubble received">
+        <p>Trendles really helps me nurture it!</p>
+        <div class="timestamp">9:01 AM</div>
+      </div>
+  
+      <div class="chat-bubble sent">
+        <p>That's good to hear! I love designing</p>
+        <div class="timestamp">9:03 AM</div>
+      </div>
+  
+      <!-- Regular received message and reply -->
+      <div class="chat-bubble sent">
+        <p>But the Trendles community was just so friendly that I just cried all night.</p>
+        <div class="timestamp">9:05 AM</div>
+      </div>
+  
+      <!-- Regular sent message and reply -->
+      <div class="chat-bubble received">
+        <p>Hmmm, I don't know what to say...</p>
+        <div class="timestamp">9:07 AM</div>
+      </div>
+    </div>
+</body>
+</html>
